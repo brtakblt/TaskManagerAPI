@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace DAL.Concrete.EfCore
 {
-    public class EfCoreTaskDal : EfCoreGenericRepository<ENTITY.Task,AppDbContext>
+    public class EfCoreAssignmentDal : EfCoreGenericRepository<Assignment, AppDbContext>
     {
         private readonly AppDbContext _appDbContext;
 
-        public EfCoreTaskDal(AppDbContext appDbContext) : base(appDbContext)
+        public EfCoreAssignmentDal(AppDbContext appDbContext) : base(appDbContext)
         {
             _appDbContext = appDbContext;
         }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Abstract
 {
-    internal interface ITaskDal:IRepository<ENTITY.Task>
+    internal interface IAssignmentDal:IRepository<Assignment>
     {
     }
 }

@@ -20,7 +20,7 @@ namespace DAL.Concrete
         public DbSet<Commet> commets { get; set; }
         public DbSet<Project> projects { get; set; }
         public DbSet<Role> roles { get; set; }
-        public DbSet<ENTITY.Task> tasks { get; set; }
+        public DbSet<Assignment> assignments { get; set; }
         public DbSet<User> users { get; set; }
 
    
