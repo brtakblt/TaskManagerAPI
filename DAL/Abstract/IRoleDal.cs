@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Abstract
 {
-    internal interface IRoleDal:IRepository<Role>
+    public interface IRoleDal:IRepository<Role>
     {
     }
 }

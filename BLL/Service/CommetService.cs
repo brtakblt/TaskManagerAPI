@@ -3,6 +3,7 @@ using ENTITY;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -28,6 +29,20 @@ namespace BLL.Service
             await _commetDal.DeleteAsync(Id);
         }
 
+        public async Task<IEnumerable<Commet>> GetAllAsync(Expression<Func<Commet, bool>>filter = null)
+        {
+            return await _commetDal.GetAllAsync(filter);
+        }
+
+        public async Task<Commet> GetById(int Id)
+        {
+            return await _commetDal.GetByIdAsync(Id);
+        }
+        
+        public async Task UpdateAsync()
+        {
+            await _commetDal.UpdateAsync();
+        }
 
     }
 }
