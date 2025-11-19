@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 
 namespace DAL.Abstract
 {
-    public interface IRoleDal:IRepository<Role>
+    public interface IRoleDal : IRepository<Role>
     {
+        Task UpdateAsync(Role role);
     }
 }

@@ -10,7 +10,7 @@ namespace ENTITY.Repositories
     public interface IRepository<T>
     {
         Task CreateAysnc(T entity);
-        Task UpdateAsync();
+        Task UpdateAsync(Project project);
         Task DeleteAsync(int Id);
         Task<IEnumerable<T>> GetAllAsync(Expression<Func<T, bool>> filter = null);
         Task<T> GetByIdAsync(int Id);

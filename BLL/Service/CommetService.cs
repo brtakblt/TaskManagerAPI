@@ -39,9 +39,9 @@ namespace BLL.Service
             return await _commetDal.GetByIdAsync(Id);
         }
         
-        public async Task UpdateAsync()
+        public async Task UpdateAsync(Commet entity)
         {
-            await _commetDal.UpdateAsync();
+            await _commetDal.UpdateAsync(entity);
         }
 
     }

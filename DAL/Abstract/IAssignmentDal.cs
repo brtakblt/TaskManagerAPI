@@ -8,7 +8,9 @@ using System.Threading.Tasks;
 
 namespace DAL.Abstract
 {
-    public interface IAssignmentDal:IRepository<Assignment>
+    public interface IAssignmentDal : IRepository<Assignment>
     {
+        
+        Task UpdateAsync(Assignment assignment);
     }
 }

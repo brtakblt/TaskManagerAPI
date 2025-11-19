@@ -19,7 +19,7 @@ namespace TaskManagerAPI
             builder.Services.AddDbContext<AppDbContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("EfCoreConnection")));
 
-           
+      
 
 
             builder.Services.AddControllers();

@@ -28,9 +28,12 @@ namespace DAL.Concrete.EfCore
             await _appdbcontext.SaveChangesAsync();
         }
 
-        public async Task UpdateAsync()
+        public async Task UpdateAsync(T entity)
         {
+            _appdbcontext.Set<T>().Update(entity);
             await _appdbcontext.SaveChangesAsync();
+
+
         }
 
         public async Task DeleteAsync(int id)

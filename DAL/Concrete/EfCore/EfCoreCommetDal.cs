@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Concrete.EfCore
 {
-    public class EfCoreCommetDal : EfCoreGenericRepository<Commet, AppDbContext> 
+    public class EfCoreCommetDal : EfCoreGenericRepository<ENTITY.Commet, AppDbContext> 
     {
         private readonly AppDbContext _appDbContext;
 

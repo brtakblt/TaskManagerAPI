@@ -49,9 +49,9 @@ namespace BLL.Service
             return await _assignmentDal.GetByIdAsync(Id);
         }
 
-        public async Task UpdateAsync()
+        public async Task UpdateAsync(Assignment assignment)
         {
-            await _assignmentDal.UpdateAsync();
+            await _assignmentDal.UpdateAsync(assignment);
         }
 
 

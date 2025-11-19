@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 
 namespace DAL.Abstract
 {
-    public interface ICommetDal:IRepository<Commet>
+    public interface ICommetDal : IRepository<Commet>
     {
+        Task UpdateAsync(Commet entity);
     }
 }

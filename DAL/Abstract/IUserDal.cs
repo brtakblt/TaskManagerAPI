@@ -8,7 +8,9 @@ using System.Threading.Tasks;
 
 namespace DAL.Abstract
 {
-    public interface IUserDal:IRepository<User>
+    public interface IUserDal : IRepository<User>
     {
+        Task UpdateAsync();
+        Task UpdateAsync(User user);
     }
 }
