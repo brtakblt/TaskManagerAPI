@@ -1,5 +1,7 @@
-﻿using DAL.Abstract;
+﻿using BLL.Abstract;
+using DAL.Abstract;
 using ENTITY;
+using ENTITY.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace BLL.Service
 {
-    public class ProjectService
+    public class ProjectService: IProjectService
     {
 
         private readonly IProjectDal _projectdal;
@@ -61,6 +63,31 @@ namespace BLL.Service
         public async Task UpdateAsync(Project project)
         {
             await _projectdal.UpdateAsync(project);
+        }
+
+        Task IRepository<Project>.CreateAysnc(Project entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task IRepository<Project>.DeleteAsync(int Id)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<IEnumerable<Project>> IRepository<Project>.GetAllAsync(Expression<Func<Project, bool>> filter)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<Project> IRepository<Project>.GetByIdAsync(int Id)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task IRepository<Project>.UpdateAsync(Project project)
+        {
+            throw new NotImplementedException();
         }
     }
 }

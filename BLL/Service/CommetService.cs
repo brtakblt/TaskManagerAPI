@@ -1,5 +1,7 @@
-﻿using DAL.Abstract;
+﻿using BLL.Abstract;
+using DAL.Abstract;
 using ENTITY;
+using ENTITY.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace BLL.Service
 {
-    public class CommetService
+    public class CommetService :ICommetService
     {
         private readonly ICommetDal _commetDal;
 
@@ -44,5 +46,29 @@ namespace BLL.Service
             await _commetDal.UpdateAsync(entity);
         }
 
+        Task IRepository<Commet>.CreateAysnc(Commet entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task IRepository<Commet>.DeleteAsync(int Id)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<IEnumerable<Commet>> IRepository<Commet>.GetAllAsync(Expression<Func<Commet, bool>> filter)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<Commet> IRepository<Commet>.GetByIdAsync(int Id)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task IRepository<Commet>.UpdateAsync(Project project)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

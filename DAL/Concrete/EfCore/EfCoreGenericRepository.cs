@@ -1,4 +1,5 @@
 ﻿
+using ENTITY.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using System;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Concrete.EfCore
 {
-    public class EfCoreGenericRepository<T,TContext>
+    public class EfCoreGenericRepository<T,TContext> 
 
         where T : class
         where TContext : AppDbContext

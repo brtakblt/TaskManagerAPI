@@ -1,5 +1,7 @@
-﻿using DAL.Abstract;
+﻿using BLL.Abstract;
+using DAL.Abstract;
 using ENTITY;
+using ENTITY.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace BLL.Service
 {
-    public class AssignmentService
+    public class AssignmentService : IAssignmentService
     {
         private readonly IAssignmentDal _assignmentDal;
 
@@ -54,6 +56,29 @@ namespace BLL.Service
             await _assignmentDal.UpdateAsync(assignment);
         }
 
+        Task IRepository<Assignment>.CreateAysnc(Assignment entity)
+        {
+            throw new NotImplementedException();
+        }
 
+        Task IRepository<Assignment>.DeleteAsync(int Id)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<IEnumerable<Assignment>> IRepository<Assignment>.GetAllAsync(Expression<Func<Assignment, bool>> filter)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<Assignment> IRepository<Assignment>.GetByIdAsync(int Id)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task IRepository<Assignment>.UpdateAsync(Project project)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -1,3 +1,5 @@
+using BLL.Service;
+using BLL.Abstract;
 using DAL.Abstract;
 using DAL.Concrete;
 using DAL.Concrete.EfCore;
@@ -19,8 +21,13 @@ namespace TaskManagerAPI
             builder.Services.AddDbContext<AppDbContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("EfCoreConnection")));
 
-      
+  
 
+            builder.Services.AddScoped<IAssignmentService, AssignmentService>();
+            builder.Services.AddScoped<ICommetService, CommetService>();
+            builder.Services.AddScoped<IProjectService, ProjectService>();
+            builder.Services.AddScoped<IUserService, UserService>();
+            builder.Services.AddScoped<IRoleService, RoleService>();
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
